@@ -1,0 +1,14 @@
+
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="b" r="100%" cx="82%" cy="53%"><stop offset="0%" stop-color="#85FFBD"/><stop offset="100%" stop-color="#fffb7d"/></radialGradient><clipPath id="a"><path fill="currentColor" d="M901.5 636.5q-75.5 136.5-200 218T439 890q-138-46-250.5-141t-78-236.5Q145 371 200 223T416 69.5Q577 64 675.5 167t200 218q101.5 115 26 251.5Z"/></clipPath></defs><g clip-path="url(#a)"><path fill="url(#b)" d="M901.5 636.5q-75.5 136.5-200 218T439 890q-138-46-250.5-141t-78-236.5Q145 371 200 223T416 69.5Q577 64 675.5 167t200 218q101.5 115 26 251.5Z"/></g></svg>
+
+<svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs> 
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop id="stop1" stop-color="#96BEF2" offset="0%"></stop>
+                <stop id="stop2" stop-color="#D1E5FF" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+    <path fill="url(#sw-gradient)" d="M14.7,-26.1C21,-21.8,29.3,-21.8,32.7,-18.1C36,-14.5,34.3,-7.2,32,-1.4C29.6,4.5,26.5,9,25.1,16C23.7,23,23.9,32.4,20,35C16.1,37.6,8.1,33.3,0.3,32.7C-7.4,32.2,-14.8,35.3,-20.6,33.8C-26.5,32.4,-30.8,26.3,-32.6,19.9C-34.5,13.5,-34,6.7,-34,0C-34,-6.7,-34.5,-13.5,-33,-20.5C-31.4,-27.5,-27.8,-34.7,-22,-39.2C-16.1,-43.8,-8.1,-45.6,-1.9,-42.2C4.2,-38.9,8.4,-30.4,14.7,-26.1Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
