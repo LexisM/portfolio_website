@@ -28,29 +28,33 @@ const projects = [
 ];
 function MyProject() {
     return (
-        <section id="projects" className=" bg-brand-200 dark:bg-brand-dark ">
-            <div className="container mx-auto p-4 box-border">
+        <section id="projects" className=" lg:h-screen  bg-brand-200 dark:bg-brand-dark ">
+            <div className="container  h-full mx-auto ">
+                <div className="w-full h-full  flex flex-col  justify-center ">
+                    <h1 className="text-5xl block my-24 text-center font-bold text-secondary dark:text-brand-200">
+                        My Projects
+                    </h1>
+                    <div className="flex flex-col w-full mb-14  lg:flex-row gap-4  justify-around">
 
-                <h1 className="text-5xl my-14 text-center font-bold text-secondary dark:text-brand-200">
-                    My Projects
-                </h1>
-                <div className="flex flex-col mb-14 gap-10 lg:flex-row lg:flex-wrap lg:items-start   lg:place-content-center border-box">
+                        {
+                            projects.map(project => (
+                                <Card
+                                    key={project.id}
+                                    projectName={project.name}
+                                    gitHub={project.gitHub ? project.gitHub : ""}
+                                    link={project.link ? project.link : ""}
+                                    projectDescription={project.description}
+                                    thumbnail={project.thumbnail} />
+                            ))
 
-                    {
-                        projects.map(project => (
-                            <Card
-                                key={project.id}
-                                projectName={project.name}
-                                gitHub={project.gitHub ? project.gitHub : ""}
-                                link={project.link ? project.link : ""}
-                                projectDescription={project.description}
-                                thumbnail={project.thumbnail} />
-                        ))
-
-                    }
+                        }
 
 
+                    </div>
                 </div>
+
+
+
 
             </div>
 

@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-target-blank */
+
 // import { useSpring, animated } from "@react-spring/web";
 import { GitHub, LinkedIn, UpWork, DownloadFile } from "../assets/Icons";
 
@@ -33,13 +33,13 @@ function Hero() {
                         </p>
                         <div className="mx-3 h-18 flex items-center  max-md:justify-center dark:text-white space-x-6 max-md:h-12 py-4 ">
 
-                            <a target="_blank" href="https://github.com/LexisM" aria-label="Access my GitHub click here" ><GitHub className="hover:outline rounded-xl " color={"text-secondary dark:text-brand-200/80 hover:outline rounded-xl "} size={48}></GitHub></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/lexis-bonilla-junior-developer/" aria-label="Access my LinkedIn click here"><LinkedIn className="hover:outline rounded-xl " color={"text-secondary dark:text-brand-200/80 hover:outline rounded-xl "} size={48} ></LinkedIn></a>
-                            <a target="_blank" href="https://www.upwork.com/freelancers/~017b7882204d7c5d62" aria-label="Access my UpWork click here"><UpWork className="hover:outline rounded-xl" color={"text-secondary dark:text-brand-200/80 hover:outline rounded-xl "} size={48}></UpWork></a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/LexisM" aria-label="Access my GitHub click here" ><GitHub className="  " color={"text-secondary dark:text-brand-200/80 hover:scale-125 transition-all"} size={48}></GitHub></a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/lexis-bonilla-junior-developer/" aria-label="Access my LinkedIn click here"><LinkedIn className="hover:scale-110 rounded-xl " color={"text-secondary transition-all dark:text-brand-200/80 hover:scale-125 "} size={48} ></LinkedIn></a>
+                            <a target="_blank" rel="noreferrer" href="https://www.upwork.com/freelancers/~017b7882204d7c5d62" aria-label="Access my UpWork click here"><UpWork className="hover:scale-110 rounded-xl" color={"text-secondary dark:text-brand-200/80 transition-all hover:scale-125"} size={48}></UpWork></a>
                         </div>
                         <div className="flex space-x-2 my-6 md:mt-40 justify-center md:justify-start 2 items-center">
-                            <a href="" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Dowload CV  </a>
-                            <DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile>
+                            <a href="src/Files/CV.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Dowload CV  </a>
+                            <a href="src/Files/CV.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
                         </div>
 
 
@@ -54,12 +54,12 @@ function Hero() {
                                 <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className=" w-[80%] mx-auto md:w-full opacity-60 absolute  -z-20 ">
                                     <defs>
                                         <linearGradient id="sw-gradient" x1="0" x2="1.1" y1="1" y2="0">
-                                            <stop id="stop1" stopColor="#96BEF2" offset="0%"></stop>
+                                            <stop id="stop1" stopColor="#96BEF2" offset="1%"></stop>
                                             <stop id="stop2" stopColor="white" offset="100%"></stop>
                                         </linearGradient>
                                     </defs>
                                     <path fill="url(#sw-gradient)" width="100" height="100" transform="translate(50 50)" >
-                                        <animate attributeName="d" dur="50000ms" repeatCount="indefinite"
+                                        <animate attributeName="d" dur="40000ms" repeatCount="indefinite"
                                             values="
                                             M25.7,-32.2C31.8,-25.4,34.3,-16,33.4,-7.9C32.5,0.3,28.1,7,24.7,15.5C21.3,24.1,18.8,34.4,12.2,39.3C5.6,44.3,-5.1,43.8,-13.5,39.6C-21.9,35.5,-27.9,27.5,-31.4,19.2C-34.8,10.9,-35.6,2.3,-35.1,-7.1C-34.5,-16.5,-32.6,-26.5,-26.5,-33.3C-20.4,-40.1,-10.2,-43.7,-0.2,-43.5C9.8,-43.2,19.5,-39,25.7,-32.2Z;
 
@@ -80,7 +80,7 @@ function Hero() {
                                         </animate>
                                     </path>
                                 </svg>
-                                <svg id="sw-js-blob-svg-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className=" w-[80%] mx-auto md:w-full opacity-10 absolute  -z-30 ">
+                                <svg id="sw-js-blob-svg-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className=" w-[80%] mx-auto md:w-full opacity-20 absolute  -z-30 ">
                                     <defs>
                                         <linearGradient id="blob-gradient" x1="0" x2="1" y1="1" y2="0">
                                             <stop id="stop1" stopColor="#022859" offset="0%"></stop>
@@ -111,7 +111,7 @@ function Hero() {
                                 </svg>
 
                             </div>
-                            <img className="z-10 w-[80%] mx-auto md:w-full " src="src\assets\photo.png" alt="Lexis Bonilla photo" />
+                            <img className="z-10 w-[80%] mx-auto md:w-full " width="500" height="500" src="src\assets\photo.png" alt="Lexis Bonilla photo" />
                         </div>
 
                     </div>

@@ -71,18 +71,18 @@ function Technologies() {
         }
     ]
     return (
-        <section id="technologies" className="bg-brand-200/50 backdrop-blur-lg dark:bg-brand-200 pb-10">
+        <section id="technologies" className="bg-brand-300  dark:bg-brand-200 pb-10">
             <div className="container mx-auto p-4 box-border">
 
                 <h1 className="text-5xl my-14 text-center font-bold  text-slate-700 ">
                     Technologies
                 </h1>
 
-                <div className=" grid grid-cols-4 *:rounded-lg *:overflow-hidden md:grid-cols-6 gap-3  ">
+                <div className=" grid grid-cols-4 *:rounded-lg *:overflow-hidden md:grid-cols-6 gap-2   ">
                     {
                         techns.map(tech => (
 
-                            <img className="object-contain h-auto w-9/12 transition-all hover:scale-110" key={tech.id} src={`src/assets/technologies/${tech.img}`} alt={tech.name} />
+                            <img className="object-contain h-auto w-6/12 transition-all hover:scale-110" key={tech.id} src={`src/assets/technologies/${tech.img}`} alt={tech.name} />
 
                         )
                         )

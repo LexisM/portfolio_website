@@ -1,4 +1,6 @@
-import Model from "./Model";
+import { lazy, Suspense } from "react";
+
+const ModelPreview = lazy(() => import('./Model'));
 
 
 function About() {
@@ -22,7 +24,10 @@ function About() {
 
                     </div>
                     <div className="w-full  h-full lg:w-3/5   ">
-                        <Model />
+                        <Suspense fallback={null}>
+                            <ModelPreview />
+                        </Suspense>
+
                     </div>
 
                 </div>

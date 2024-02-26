@@ -1,14 +1,38 @@
+//----------------IMPORTS----------------------- 
 import './index.css'
 import NavBar from './components/NavBar_2'
 import Hero from './components/Hero'
-import About from './components/About'
 import MyProject from './components/MyProject'
 import Technologies from './components/Technologies'
 import Footer from './components/Footer'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
+import { useInView, animated, useSpring } from '@react-spring/web'
+import PropType from "prop-types";
+//----------------IMPORTS----------------------- 
 
 
+
+//----------------CONSTANTS----------------------- 
+
+const About = lazy(() => import('./components/About'));
+
+const FadeIn = ({ children }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.5, // Adjust the threshold as needed
+  });
+
+  const fadeInAnimation = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(20px)',
+  });
+
+  return <animated.div ref={ref} style={fadeInAnimation}>{children}</animated.div>;
+};
 function App() {
+  FadeIn.propTypes = {
+    children: PropType.any
+  }
 
   useEffect(() => {
     if (localStorage.getItem("Dark") === "true") {
@@ -31,12 +55,30 @@ function App() {
     <>
       {/* className='dark' */}
       <div className={`${isDarkMode ? 'dark' : ' '} `}   >
-        <NavBar onChange={toggleTheme} />
-        <Hero />
-        <About />
-        <MyProject />
-        <Technologies />
-        <Footer />
+        <div className='bg-brand-200 dark:bg-brand-dark'>
+          <NavBar onChange={toggleTheme} />
+
+          <Hero />
+
+
+          <FadeIn>
+
+            <Suspense>
+              <About />
+            </Suspense>
+          </FadeIn>
+          <FadeIn>
+            <MyProject />
+
+          </FadeIn>
+          <FadeIn>
+            <Technologies />
+          </FadeIn>
+
+
+
+          <Footer />
+        </div>
       </div>
 
 
