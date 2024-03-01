@@ -32,7 +32,17 @@ export default {
         dmSans: ["DM Sans", "sans serif"],
         cormorant: ["Cormorant Garamond", "serif"]
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translateX(-15px)' },
+          '50%': { transform: 'translateX(15px)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1.5s ease-in-out infinite',
+      }
     },
+
   },
 
 

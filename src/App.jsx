@@ -19,7 +19,7 @@ const About = lazy(() => import('./components/About'));
 const FadeIn = ({ children }) => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Trigger animation only once
-    threshold: 0.5, // Adjust the threshold as needed
+    threshold: 0.4, // Adjust the threshold as needed
   });
 
   const fadeInAnimation = useSpring({
@@ -29,6 +29,8 @@ const FadeIn = ({ children }) => {
 
   return <animated.div ref={ref} style={fadeInAnimation}>{children}</animated.div>;
 };
+
+
 function App() {
   FadeIn.propTypes = {
     children: PropType.any

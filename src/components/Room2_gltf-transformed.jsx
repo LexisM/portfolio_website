@@ -8,7 +8,7 @@ Command: npx gltfjsx@6.2.16 ..\assets\room2_gltf-transformed.glb
 import { useGLTF } from '@react-three/drei'
 
 export function ModelTransformed(props) {
-  const { nodes, materials } = useGLTF('src/assets/room-transformed.glb')
+  const { nodes, materials } = useGLTF('/room-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[-4.212, 1.751, 1.615]} scale={[0.728, 0.05, 1.958]}>
@@ -39,4 +39,4 @@ export function ModelTransformed(props) {
   )
 }
 
-useGLTF.preload('src/assets/room-transformed.glb')
+useGLTF.preload('/room-transformed.glb')

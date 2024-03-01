@@ -1,6 +1,6 @@
 //------ IMPORTS ------
 import PropType from "prop-types";
-import { Moon } from "../assets/Icons";
+import { Moon } from "../svg/Icons";
 import { useSpring, animated } from "@react-spring/web";
 //------
 
@@ -24,7 +24,7 @@ function NavBar({ onChange }) {
 
 
                 < a href="/" className="flex items-center space-x-3" >
-                    <img src="src\assets\avatar_3.png" alt="Avatar" />
+                    <img src="\assets\avatar_3.png" alt="Avatar" />
                     <span className="hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lexis</span>
                 </a >
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

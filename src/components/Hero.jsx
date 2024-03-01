@@ -1,31 +1,32 @@
 
 // import { useSpring, animated } from "@react-spring/web";
-import { GitHub, LinkedIn, UpWork, DownloadFile } from "../assets/Icons";
+import { GitHub, LinkedIn, UpWork, DownloadFile } from "../svg/Icons";
+import { useSpring, animated } from "@react-spring/web";
 
 
 function Hero() {
 
-    // const props = useSpring({
-    //     from: { opacity: 0, transform: 'translatex(200px)' },
-    //     to: { opacity: 1, transform: 'translateY(0px)' },
-    //     config: { duration: 1000 },
-    // });
+    const props = useSpring({
+        from: { opacity: 0, transform: 'translatex(200px)' },
+        to: { opacity: 1, transform: 'translateY(0px)' },
+        config: { duration: 1000 },
+    });
 
-    // const slide = useSpring({
-    //     from: { opacity: 0, transform: 'translatex(-200px)' },
-    //     to: { opacity: 1, transform: 'translateY(0px)' },
-    //     config: { duration: 1000 },
-    // });
+    const slide = useSpring({
+        from: { opacity: 0, transform: 'translatex(-200px)' },
+        to: { opacity: 1, transform: 'translateY(0px)' },
+        config: { duration: 1000 },
+    });
 
 
 
     return (
         <section id="\home" className="w-sreen h-screen backdrop-blur-lg   bg-brand-200 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))] dark:bg-brand-dark  pt-12 ">
             <div className="container mx-auto mt-12 md:mt-44">
-                <h1 className="w-full  text-4xl md:text-7xl text-center md:text-left font-bold  underline text-primary dark:text-brand-200  decoration-brand-400 decoration-2 dark:decoration-accent-600 underline-offset-4 font-dmSans ">Full Stack Developer </h1>
+                <animated.h1 style={props} className="w-full  text-4xl md:text-7xl text-center md:text-left font-bold  underline text-primary dark:text-brand-200  decoration-brand-400 decoration-2 dark:decoration-accent-600 underline-offset-4 font-dmSans ">Full Stack Developer </animated.h1>
                 <div className="flex flex-col items-center md:justify-between  md:flex-row box-border  ">
 
-                    <hgroup className="mt-0 flex-row w-full justify-center lg:w-1/2 ">
+                    <animated.div className="mt-0 flex-row w-full justify-center lg:w-1/2 " style={props}>
 
                         <h2 className="mt-4 text-2xl md:text-3xl text-center md:text-left text-wrap font-bold  font-cormorant  text-brand-400 "> Lexis Bonilla<span className="">🖥️☕😁</span></h2>
                         <p className="text-md  text-center  md:text-left md:text-xl mx-2 my-10 lg:my-24  md:mx-0  text-secondary dark:text-brand-300">
@@ -38,15 +39,15 @@ function Hero() {
                             <a target="_blank" rel="noreferrer" href="https://www.upwork.com/freelancers/~017b7882204d7c5d62" aria-label="Access my UpWork click here"><UpWork className="hover:scale-110 rounded-xl" color={"text-secondary dark:text-brand-200/80 transition-all hover:scale-125"} size={48}></UpWork></a>
                         </div>
                         <div className="flex space-x-2 my-6 md:mt-40 justify-center md:justify-start 2 items-center">
-                            <a href="src/Files/CV.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Dowload CV  </a>
-                            <a href="src/Files/CV.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
+                            <a href="./src/Files/CV.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Dowload CV  </a>
+                            <a href="./src/Files/CV.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
                         </div>
 
 
 
-                    </hgroup>
+                    </animated.div>
 
-                    <div className="flex items-center">
+                    <animated.div className="flex items-center" style={slide}>
                         <div className="relative overflow-hidden lg:overflow-visible">
                             <div className="relative w-[140%] 
                              -left-8 md:-left-18 lg:-left-20 -top-16 md:-top-16  lg:-top-24 ">
@@ -111,10 +112,10 @@ function Hero() {
                                 </svg>
 
                             </div>
-                            <img className="z-10 w-[80%] mx-auto md:w-full " width="500" height="500" src="src\assets\photo.png" alt="Lexis Bonilla photo" />
+                            <img className="z-10 w-[80%] mx-auto md:w-full " width="500" height="500" src="/assets/photo.png" alt="Lexis Bonilla photo" />
                         </div>
 
-                    </div>
+                    </animated.div>
 
 
 
