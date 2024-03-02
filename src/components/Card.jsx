@@ -13,10 +13,6 @@ Card.propTypes = {
 };
 
 function Card({ projectName, gitHub, link, projectDescription, thumbnail, badges }) {
-
-
-
-
     return (
 
         <div className="w-full  lg:max-w-md bg-brand-dark border border-brand-400 rounded-lg shadow dark:bg-brand-200 dark:border-gray-700" >
@@ -33,11 +29,11 @@ function Card({ projectName, gitHub, link, projectDescription, thumbnail, badges
 
                 <p className="mb-3 font-normal text-brand-300 dark:text-secondary">{projectDescription}</p>
 
-                <div className=" flex flex-wrap py-4">
+                <div className=" flex flex-wrap py-4 ">
                     {badges &&
                         badges.map((badge, index) => {
                             return (
-                                <span key={index} className=" bg-secondary text-brand-200 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-secondary">{badge}</span>
+                                <span key={index} className=" bg-secondary text-brand-200 my-1 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-white border border-secondary">{badge}</span>
 
                             )
                         })
@@ -48,7 +44,7 @@ function Card({ projectName, gitHub, link, projectDescription, thumbnail, badges
                 <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 " />
 
 
-                <div className="my-3 ">
+                <div className="my-3  flex justify-end ">
 
                     {gitHub && <a target="_blank" rel="noreferrer" aria-label="Access my project on GitHub" className="inline-block hover:scale-125 transition-all hover:text-accent-60" href={gitHub}><GitHub size={44} color={"text-accent dark:text-primary  dark:hover:text-secondary "} /></a>}
 

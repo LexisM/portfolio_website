@@ -8,8 +8,14 @@
 :root {
   font-family: "DM Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #sw-js-blob-svg {

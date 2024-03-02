@@ -6,7 +6,9 @@
   <meta name="keywords" content="Full-Stack, Frontend, JavaScript"/>
   <meta name="author" content="Lexis Bonilla"/>
   <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" /> --> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" /> 
+
     <title>Lexis Bonilla | Fullstack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +23,15 @@
     <meta >
 
   </head>
-  <body class="border-box overflow-x-hidden">
+  <body >
+    
     <div id="root" ></div>
     <script type="module" src="/src/main.jsx"></script>
     <script type="module" src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
   </body>
 </html>

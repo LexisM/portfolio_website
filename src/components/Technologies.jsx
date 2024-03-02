@@ -71,14 +71,14 @@ function Technologies() {
         }
     ]
     return (
-        <section id="technologies" className=" bg-brand-300  dark:bg-brand-200 pb-10">
-            <div className="container mx-auto p-4 box-border">
+        <section id="technologies" className=" mt-32 bg-brand-300  dark:bg-brand-200 pb-10">
+            <div className="p-4 box-border r">
 
-                <h1 className="text-5xl my-14 text-center font-bold  text-slate-700 ">
+                <h1 className="text-5xl my-16 text-center font-bold  text-slate-700 font-cormorant ">
                     Technologies
                 </h1>
 
-                <div className=" grid grid-cols-4 *:rounded-lg *:overflow-hidden md:grid-cols-6 gap-2   ">
+                <div className="container mx-auto grid grid-cols-4 *:rounded-lg  md:grid-cols-6 gap-2   ">
                     {
                         techns.map(tech => (
 

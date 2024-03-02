@@ -3,16 +3,14 @@
 export default {
   darkMode: 'class',
   content: [
-    "./index.html",
+    "index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.{js,jsx}"
+    'node_modules/flowbite-react/lib/esm/**/*.{js,jsx,ts,tsx}'
   ],
   plugins: [
 
-    // eslint-disable-next-line no-undef
     require('flowbite/plugin')
   ],
-
 
   theme: {
     colors: {
@@ -32,6 +30,7 @@ export default {
         dmSans: ["DM Sans", "sans serif"],
         cormorant: ["Cormorant Garamond", "serif"]
       },
+
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'translateX(-15px)' },

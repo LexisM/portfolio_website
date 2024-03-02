@@ -14,17 +14,17 @@ function NavBar({ onChange }) {
     const slideDown = useSpring({
         from: { y: '-100px' },
         to: { y: '0' },
-        config: { duration: 500 },
+        config: { duration: 800 },
     });
 
     return (
-        <animated.nav className="bg-brand-200 dark:bg-brand-dark fixed w-full z-20 top-0 start-0 border-b-2 border-primary" style={slideDown}>
+        <animated.nav className="fixed top-0 w-full z-20  border-b-2 border-primary backdrop-blur-md bg-brand-300/50 dark:bg-primary/55 px-6" style={slideDown}>
 
-            <div className=" container flex flex-wrap items-center justify-between mx-auto py-2">
+            <div className="container flex flex-wrap items-center justify-between mx-auto py-2">
 
 
                 < a href="/" className="flex items-center space-x-3" >
-                    <img src="\assets\avatar_3.png" alt="Avatar" />
+                    <img src="\assets\avatar.png" alt="Avatar" />
                     <span className="hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lexis</span>
                 </a >
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -47,7 +47,7 @@ function NavBar({ onChange }) {
                             <a href="#about" className="block py-2 px-3  rounded  md:hover:text-brand-400 md:p-0 md:dark:hover:text-accent-400  ">About</a>
                         </li>
                         <li className="">
-                            <a href="/#projects" className="block py-2 px-3  rounded  md:hover:text-brand-400 md:p-0 md:dark:hover:text-accent-400  ">Projects</a>
+                            <a href="#projects" className="block py-2 px-3  rounded  md:hover:text-brand-400 md:p-0 md:dark:hover:text-accent-400  ">Projects</a>
                         </li>
                         <li className="">
                             <a href="#technologies" className="block py-2 px-3  rounded  md:hover:text-brand-400 md:p-0 md:dark:hover:text-accent-400  ">Technologies</a>

@@ -9,36 +9,37 @@ function Hero() {
     const props = useSpring({
         from: { opacity: 0, transform: 'translatex(200px)' },
         to: { opacity: 1, transform: 'translateY(0px)' },
-        config: { duration: 1000 },
+        config: { duration: 800 },
     });
 
     const slide = useSpring({
         from: { opacity: 0, transform: 'translatex(-200px)' },
         to: { opacity: 1, transform: 'translateY(0px)' },
-        config: { duration: 1000 },
+        config: { duration: 800 },
     });
 
 
 
     return (
-        <section id="\home" className="w-sreen h-screen backdrop-blur-lg   bg-brand-200 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))] dark:bg-brand-dark  pt-12 ">
-            <div className="container mx-auto mt-12 md:mt-44">
-                <animated.h1 style={props} className="w-full  text-4xl md:text-7xl text-center md:text-left font-bold  underline text-primary dark:text-brand-200  decoration-brand-400 decoration-2 dark:decoration-accent-600 underline-offset-4 font-dmSans ">Full Stack Developer </animated.h1>
+        <section id="\home" className="h-screen bg-brand-200 dark:bg-brand ">
+
+            <div className="flex-col  pt-24">
+                <animated.h1 style={props} className="w-full my-2 text-4xl md:text-7xl  md:mt-12 text-center md:text-left font-bold  underline text-primary dark:text-brand-200  decoration-brand-400 decoration-2 dark:decoration-accent-600 underline-offset-4 font-dmSans ">Full Stack Developer </animated.h1>
                 <div className="flex flex-col items-center md:justify-between  md:flex-row box-border  ">
 
-                    <animated.div className="mt-0 flex-row w-full justify-center lg:w-1/2 " style={props}>
+                    <animated.div className="mt-0 flex-row w-full justify-center md:w-1/2 " style={props}>
 
-                        <h2 className="mt-4 text-2xl md:text-3xl text-center md:text-left text-wrap font-bold  font-cormorant  text-brand-400 "> Lexis Bonilla<span className="">🖥️☕😁</span></h2>
-                        <p className="text-md  text-center  md:text-left md:text-xl mx-2 my-10 lg:my-24  md:mx-0  text-secondary dark:text-brand-300">
+                        <h2 className="mt-2 text-2xl md:text-3xl md:mt-6 text-center md:text-left text-wrap font-extrabold  font-cormorant  text-brand-400  "> Lexis Bonilla<span className="">🖥️☕😁</span></h2>
+                        <p className="text-md  text-center mx-2 my-6 md:text-left md:text-xl md:my-10  lg:my-20  md:mx-0  text-secondary dark:text-brand-400">
                             Welcome to my digital hub! <span className="font-semibold text-brand dark:text-white"> I&apos;m a Full-Stack developer with 3 years of experience.</span> Here, you will find a showcase of my college projects, a testament to my journey as I grow in the world of coding. Let&apos;s build something amazing together!
                         </p>
-                        <div className="mx-3 h-18 flex items-center  max-md:justify-center dark:text-white space-x-6 max-md:h-12 py-4 ">
+                        <div className="mx-3 py-10   h-18 flex items-center  max-md:justify-center dark:text-white space-x-6 max-md:h-12  ">
 
                             <a target="_blank" rel="noreferrer" href="https://github.com/LexisM" aria-label="Access my GitHub click here" ><GitHub className="  " color={"text-secondary dark:text-brand-200/80 hover:scale-125 transition-all"} size={48}></GitHub></a>
                             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/lexis-bonilla-junior-developer/" aria-label="Access my LinkedIn click here"><LinkedIn className="hover:scale-110 rounded-xl " color={"text-secondary transition-all dark:text-brand-200/80 hover:scale-125 "} size={48} ></LinkedIn></a>
                             <a target="_blank" rel="noreferrer" href="https://www.upwork.com/freelancers/~017b7882204d7c5d62" aria-label="Access my UpWork click here"><UpWork className="hover:scale-110 rounded-xl" color={"text-secondary dark:text-brand-200/80 transition-all hover:scale-125"} size={48}></UpWork></a>
                         </div>
-                        <div className="flex space-x-2 my-6 md:mt-40 justify-center md:justify-start 2 items-center">
+                        <div className="flex space-x-2 my-10 md:mt-30 justify-center md:justify-start 2 items-center">
                             <a href="./src/Files/CV.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Dowload CV  </a>
                             <a href="./src/Files/CV.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
                         </div>
@@ -47,12 +48,12 @@ function Hero() {
 
                     </animated.div>
 
-                    <animated.div className="flex items-center" style={slide}>
+                    <animated.div className=" hidden md:flex items-center " style={slide}>
                         <div className="relative overflow-hidden lg:overflow-visible">
-                            <div className="relative w-[140%] 
+                            <div className="relative w-[150%] 
                              -left-8 md:-left-18 lg:-left-20 -top-16 md:-top-16  lg:-top-24 ">
 
-                                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className=" w-[80%] mx-auto md:w-full opacity-60 absolute  -z-20 ">
+                                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className="mx-auto md:w-full opacity-60 absolute  -z-20 ">
                                     <defs>
                                         <linearGradient id="sw-gradient" x1="0" x2="1.1" y1="1" y2="0">
                                             <stop id="stop1" stopColor="#96BEF2" offset="1%"></stop>
@@ -81,7 +82,7 @@ function Hero() {
                                         </animate>
                                     </path>
                                 </svg>
-                                <svg id="sw-js-blob-svg-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className=" w-[80%] mx-auto md:w-full opacity-20 absolute  -z-30 ">
+                                <svg id="sw-js-blob-svg-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" className="mx-auto md:w-full opacity-20 absolute  -z-30 ">
                                     <defs>
                                         <linearGradient id="blob-gradient" x1="0" x2="1" y1="1" y2="0">
                                             <stop id="stop1" stopColor="#022859" offset="0%"></stop>
@@ -112,7 +113,7 @@ function Hero() {
                                 </svg>
 
                             </div>
-                            <img className="z-10 w-[80%] mx-auto md:w-full " width="500" height="500" src="/assets/photo.png" alt="Lexis Bonilla photo" />
+                            <img className="z-10  mx-auto md:w-full " width="500" height="500" src="/assets/photo.png" alt="Lexis Bonilla photo" />
                         </div>
 
                     </animated.div>

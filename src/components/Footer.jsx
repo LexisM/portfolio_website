@@ -38,18 +38,17 @@ export default function Footer() {
             );
     };
 
-
     return (
 
         <footer className=" shadow dark:bg-brand-dark  bg-brand-200 px-4 ">
             <div className="container m-auto flex flex-col lg:flex-row items-center py-10">
                 <div className="w-full lg:w-1/2 text-center  mx-12">
-                    <h1 className="text-6xl my-4 font-dmSans font-light text-primary dark:text-accent ">Let&apos;s get in touch!</h1>
-                    <h2 className="text-2xl my-2 font-semibold text-secondary dark:text-accent-400">Questions? Feedback? Proposal?</h2>
-                    <p className="text-secondary dark:text-accent-400 font-dmSans font-extralight text-2xl">Whatever it is, feel free to contact me and I&apos;ll come back to you as soon as possible.</p>
+                    <h1 className="text-4xl md:text-6xl my-4 font-dmSans font-light text-primary dark:text-accent ">Let&apos;s get in touch!</h1>
+                    <h2 className="text-xl md:text-2xl my-2 font-semibold text-secondary dark:text-accent-400">Questions? Feedback? Proposal?</h2>
+                    <p className="text-secondary dark:text-accent-400 font-dmSans font-extralight text-lg md:text-2xl">Whatever it is, feel free to contact me and I&apos;ll come back to you as soon as possible.</p>
                 </div>
-                <div className="w-full lg:w-1/2 ">
-                    <form className="w-full" method="POST" ref={form} onSubmit={sendEmail}>
+                <div className="w-full lg:w-1/2 my-4 ">
+                    <form className="w-full" id="contact-form" method="POST" ref={form} onSubmit={sendEmail}>
 
                         <div className="mb-5">
                             <label htmlFor="name-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Name</label>
@@ -61,16 +60,19 @@ export default function Footer() {
                         </div>
                         <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Write a message</label>
                         <textarea id="message" required name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-accent-400 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
-                        <ReCAPTCHA className="my-4" sitekey={" 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
+                        <ReCAPTCHA className="my-4" sitekey={"6Lf2o30pAAAAAEplnrYyMCDNB6eO0wrvK0h0HWSr"}
                             ref={captchaRef} onChange={handleOnChange}></ReCAPTCHA>
-                        <button type="submit" disabled={!isVerified} className=" disabled:opacity-50 disabled:bg-brand-dark disabled:dark:bg-accent-600 w-full py-3.5 px-5 me-2 my-10 text-sm font-medium text-brand-200 focus:outline-none bg-primary rounded-lg  hover:bg-brand-dark focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-accent-600 dark:bg-accent dark:text-primary dark:border-gray-600 dark:hover:text-brand dark:hover:bg-accent-600">Contact</button>
+                        <button type="submit" disabled={!isVerified} className=" disabled:opacity-50 disabled:bg-brand-dark disabled:dark:bg-accent-600 w-full py-3.5 px-5 me-2 my-10 text-sm font-medium text-brand-200 focus:outline-none bg-primary rounded-lg  hover:bg-brand-dark focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-accent-600 dark:bg-accent dark:text-primary dark:border-gray-600 dark:hover:text-brand dark:hover:bg-accent-600"
+                            data-sitekey="6Lf2o30pAAAAAEplnrYyMCDNB6eO0wrvK0h0HWSr"
+                            data-callback='onSubmit'
+                            data-action='submit'>Contact</button>
 
                     </form>
                 </div>
             </div>
 
             <hr className="my-6  border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">2024 <a href="/" className="hover:underline">Lexis Bonilla</a>. </span>
+            <span className="block text-sm text-center text-gray-500  dark:text-gray-400">2024 <a href="/" className="hover:underline text-center">Lexis Bonilla</a>. </span>
 
         </footer>
 

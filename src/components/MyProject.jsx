@@ -31,10 +31,10 @@ const projects = [
 ];
 function MyProject() {
     return (
-        <section id="projects" className=" lg:h-screen p-4  bg-brand-200 dark:bg-brand-dark ">
-            <div className="container  h-full mx-auto ">
-                <div className="w-full h-full  flex flex-col  justify-center ">
-                    <h1 className="text-4xl  md:text-6xl block text-center p-12 font-bold text-secondary dark:text-brand-200">
+        <section id="projects" className=" h-full bg-brand-200 dark:bg-brand py-16">
+            <div className="  mx-4 ">
+                <div className="  flex flex-col  justify-center ">
+                    <h1 className="text-4xl font-cormorant md:text-7xl block text-center p-12 font-semibold text-secondary dark:text-brand-200">
                         My Projects
                     </h1>
                     <div className="flex flex-col w-full my-2 md:my-24  lg:flex-row gap-4  justify-around">
