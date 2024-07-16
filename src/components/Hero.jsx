@@ -40,8 +40,8 @@ function Hero() {
                             <a target="_blank" rel="noreferrer" href="https://www.upwork.com/freelancers/~017b7882204d7c5d62" aria-label="Access my UpWork click here"><UpWork className="hover:scale-110 rounded-xl" color={"text-secondary dark:text-brand-200/80 transition-all hover:scale-125"} size={48}></UpWork></a>
                         </div>
                         <div className="flex space-x-2 my-10 md:mt-30 justify-center md:justify-start 2 items-center">
-                            <a href="./src/Files/resume.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Download CV  </a>
-                            <a href="./src/Files/resume.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
+                            <a href="./resume.pdf" target="_blank" rel="noreferrer" className="  p-2 mx-3 md:p-6 text-md md:text-xl font-bold text-center leading-10 dark:text-brand rounded-md dark:bg-accent  dark:hover:bg-accent-600 border-b-2 border-secondary bg-brand hover:bg-secondary text-white" >Download CV  </a>
+                            <a href="./resume.pdf" download={true}><DownloadFile color="text-brand dark:text-brand-200/80" size={58}></DownloadFile></a>
                         </div>
 
 
